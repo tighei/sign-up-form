@@ -1,0 +1,101 @@
+<script src="MAIN.js" defer></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="MAIN.js" defer></script>
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="section1">
+      <div class="logo_div">
+        <img src="./image/odin-lined.png" alt="logo" class="logo" />
+        <h1>ODIN</h1>
+      </div>
+      <div class="footer_div">
+        <p>
+          Photo By <a class="footer-link" href="#">halie West</a> on
+          <a class="footer-link" href="#">Unplash</a>
+        </p>
+      </div>
+    </div>
+    <main>
+      <div class="head">
+        <h3>
+          This is not a real online service!You know you need somthing like this
+          in your life to help you relize your deepest dreams.<br />Sign up
+          <i>now</i> to get started<br /><br />you <i>know</i> you want to
+        </h3>
+      </div>
+      <form class="form-section" action="" method="post">
+        <h3>Let's do this!</h3>
+        <div class="body_form">
+          <div class="flex-label">
+            <label for="first-name">FIRST NAME </label>
+            <input
+              type="text"
+              id="first-name"
+              name="f-name"
+              placeholder="YOUR FIRST NAME"
+            />
+          </div>
+
+          <div class="flex-label">
+            <label for="last-name">LAST NAME </label>
+            <input
+              type="text"
+              id="last-name"
+              name="l-name"
+              placeholder="YOUR LAST NAME"
+            />
+          </div>
+          <div class="flex-label">
+            <label for="email">EMAIL </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ex:you@example.com"
+            />
+          </div>
+          <div class="flex-label">
+            <label for="tel">PHONE NUMBER </label>
+            <input type="tel" id="tel" name="phone" />
+          </div>
+          <div class="flex-label">
+            <label for="password">PASSWORD </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="password"
+              title="password don't match"
+              onkeyup="passConfirm();"
+            />
+          </div>
+          <div class="flex-label">
+            <label for="password-con"> CONFIRM PASSWORD </label>
+            <input
+              type="password"
+              name="password-con"
+              id="password-con"
+              placeholder="confirme password"
+              onkeyup="passConfirm();"
+              class="error"
+            />
+            <span id="Message"></span>
+          </div>
+        </div>
+      </form>
+      <div class="foot_form">
+        <button type="submit" name="form" id="submit-btn">
+          Create Account
+        </button>
+        <p>Alredy have an account?<a href="#">Log in</a></p>
+      </div>
+    </main>
+  </body>
+</html>

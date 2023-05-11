@@ -13,7 +13,7 @@ body {
 }
 
 .section1 {
-  background-image: url(./image/aa.jpg);
+  background-image: url(./image/DOOR.jpg);
 
   background-size: cover;
   width: 50vw;
@@ -28,7 +28,7 @@ a {
   text-decoration: none;
 }
 .foot_form a {
-  color: var(--color1);
+  color: #2a8eec;
 }
 .footer_div {
   font-size: 12px;
@@ -99,7 +99,7 @@ input[id='email']:invalid {
 }
 #submit-btn {
   padding: 15 60;
-  background-color: var(--color1);
+  background-color: #2a8eec;
   border-radius: 10px;
   border: none;
   color: #eee;

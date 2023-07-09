@@ -25,8 +25,9 @@ const passConfirm = function () {
   }
 };
 let sub = SubmitBtn.addEventListener('click', (e) => {
-  e.preventDefault();
   if (check()) {
     passConfirm();
+  } else {
+    e.preventDefault();
   }
 });

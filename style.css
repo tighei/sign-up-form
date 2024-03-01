@@ -83,7 +83,7 @@ input {
   border: 1px solid #e5e7eb;
   border-radius: 10px;
 }
- input:valid {
+input:valid {
   outline: none;
   border: 1px solid #e5e7eb;
 }

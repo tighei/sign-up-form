@@ -83,14 +83,15 @@ input {
   border: 1px solid #e5e7eb;
   border-radius: 10px;
 }
-input:valid {
-  outline: none;
-  border: 1px solid #e5e7eb;
-}
+
 input:invalid {
-  outline: none;
   border: 1px solid red;
-} 
+}
+input:focus{
+  outline: none;
+  border : 1px solid #2a8eec;
+}
+
 #submit-btn {
   padding: 15 60;
   background-color: #2a8eec;
@@ -103,4 +104,9 @@ input:invalid {
 }
 .foot_form {
   margin: 0px 3rem 2rem;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+ appearance: none;
 }

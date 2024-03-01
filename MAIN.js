@@ -42,10 +42,15 @@ const submitBtn = document.getElementById("submit-btn");
 const passwordInput = document.querySelector("#password");
 const retypePasswordInput = document.querySelector("#password-con");
 const messageElement = document.getElementById("Message");
+const email = document.querySelector("#email");
 
 async function isValidPassword(password) {
     const reg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
     return reg.test(password);
+}
+function isValidEmail(email) {
+    const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return reg.test(email);
 }
 
 function confirmPasswordMatch() {
@@ -73,12 +78,27 @@ function checkPasswordMatch() {
     passwordInput.addEventListener("input", confirmPasswordMatch);
     retypePasswordInput.addEventListener("input", confirmPasswordMatch);
 }
-checkPasswordMatch();
 
 submitBtn.addEventListener("click", async (e) => {
     const isPasswordValid = await isValidPassword(passwordInput.value);
     const doPasswordsMatch = confirmPasswordMatch();
-    if (!isPasswordValid || !doPasswordsMatch) {
+    if (
+        !isPasswordValid ||
+        !doPasswordsMatch ||
+        !isValidEmail(emailInput.value)
+    ) {
         e.preventDefault();
     }
 });
+function checkEmailValidity() {
+    email.addEventListener("input", (event) => {
+        if (!isValidEmail(email.value)) {
+            email.setCustomValidity("Invalid email address!");
+        } else {
+            email.setCustomValidity("");
+        }
+    });
+}
+
+checkEmailValidity();
+checkPasswordMatch();

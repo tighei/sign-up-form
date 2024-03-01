@@ -25,7 +25,7 @@
             <div class="head">
                 <h3>Join Us<span style="color: #2a8eec">!</span></h3>
             </div>
-            <form class="form-section" method="get">
+            <form class="form-section" method="post">
                 <h3>Let's do this!</h3>
                 <div class="body_form">
                     <div class="flex-label">
@@ -34,6 +34,7 @@
                             type="text"
                             id="first-name"
                             name="f-name"
+                            minlength="3"
                             placeholder="YOUR FIRST NAME"
                         />
                     </div>
@@ -44,6 +45,7 @@
                             type="text"
                             id="last-name"
                             name="l-name"
+                            minlength="3"
                             placeholder="YOUR LAST NAME"
                         />
                     </div>
@@ -59,7 +61,7 @@
                     <div class="flex-label">
                         <label for="tel">PHONE NUMBER </label>
                         <input
-                            type="telephone"
+                            type="number"
                             id="tel"
                             placeholder="(213) ##-##-##-##"
                             name="phone"
@@ -70,6 +72,7 @@
                         <input
                             type="password"
                             id="password"
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
                             name="password"
                             placeholder="password"
                             title="password don't match"
@@ -79,6 +82,7 @@
                         <label for="password-con"> CONFIRM PASSWORD </label>
                         <input
                             type="password"
+                            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
                             name="password-con"
                             id="password-con"
                             placeholder="confirm password"
